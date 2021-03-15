@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container{
+  min-height: 50vh;
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+  padding-left: 2em;
+}
+
+header{
+  background: #333;
+  color: #fff;
+  height: 12vh;
+}
+
+nav{
+  
+  line-height: 12vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo{
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  font-style: italic;
+}
+nav .navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger{
+  display: none;
+}
+
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+}
+.hero2{
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about{
+  height: 100vh;
+
+}
+
+
+@media screen and (max-width:670px){
+  
+  .hamburger{
+    display: block;
+    padding: 6px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .hamburger:hover{
+    background: #111;
+    transition: background .8s ease-in-out;
+  }
+  .line{
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    margin: 5px;
+  }
+  .navbar{
+    position: fixed;
+    top: 12vh;
+    right: -100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    height: 80vh;
+    width: 50%;
+    background: #000;
+    transition: .5s;
+  }
+  .navbar.open{
+    right: 0;
+    transition: .5s;
+  }
+  .container{
+    width: 95%;
+  }
+}
